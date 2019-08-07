@@ -1,0 +1,6 @@
+[gerrit]
+host=gerrit.wikimedia.org
+port=29418
+project=design/strategy.git
+track=1
+defaultrebase=0
