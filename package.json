@@ -1,46 +1,42 @@
 {
-  "name": "wmui-style-guide",
+  "name": "wikimedia-design-strategy-site",
   "version": "0.1.0",
-  "description": "Wikimedia User Interface Style Guide",
+  "description": "Wikimedia Design Strategy Site, based on Wikimedia Design Style Guide",
   "keywords": [
-    "ui"
+    "design-strategy"
   ],
-  "homepage": "https://www.mediawiki.org/wiki/Design",
+  "homepage": "https://design.wikimedia.org/design-strategy/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wikimedia/WikimediaUI-Style-Guide.git"
+    "url": "https://gerrit.wikimedia.org/g/design/strategy/"
   },
   "private": true,
   "license": "MIT",
   "dependencies": {
     "fontfaceobserver": "2.1.0",
     "normalize.css": "7.0.0",
-    "wikimedia-ui-base": "0.13.0"
+    "wikimedia-ui-base": "0.17.0"
   },
   "devDependencies": {
-    "autoprefixer": "9.4.7",
-    "cssnano": "4.1.8",
-    "eslint-config-wikimedia": "0.10.1",
-    "grunt": "1.0.3",
+    "@lodder/grunt-postcss": "3.0.0",
+    "autoprefixer": "10.0.1",
+    "cssnano": "4.1.10",
+    "eslint-config-wikimedia": "0.17.0",
+    "grunt": "1.3.0",
     "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-imagemin": "3.1.0",
-    "grunt-contrib-uglify": "4.0.0",
+    "grunt-contrib-imagemin": "4.0.0",
+    "grunt-contrib-uglify": "5.0.0",
     "grunt-contrib-watch": "1.1.0",
-    "grunt-eslint": "21.0.0",
-    "grunt-exec": "3.0.0",
-    "grunt-postcss": "0.9.0",
-    "grunt-sketch": "1.0.5",
-    "grunt-stylelint": "0.10.1",
-    "grunt-svgmin": "5.0.0",
-    "imagemin": "6.1.0",
-    "imagemin-zopfli": "6.0.0",
-    "pixrem": "5.0.0",
-    "postcss": "7.0.14",
+    "grunt-eslint": "23.0.0",
+    "grunt-stylelint": "0.15.0",
+    "grunt-svgmin": "6.0.1",
+    "imagemin": "7.0.1",
+    "imagemin-zopfli": "7.0.0",
+    "postcss": "8.1.1",
     "postcss-cssnext": "3.1.0",
-    "postcss-custom-properties": "8.0.9",
+    "postcss-custom-properties": "10.0.0",
     "postcss-import": "12.0.1",
-    "sketchtool": "1.4.0",
-    "stylelint-config-wikimedia": "0.5.0"
+    "stylelint-config-wikimedia": "0.10.1"
   },
   "scripts": {
     "start": "grunt watch",

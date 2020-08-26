@@ -1,61 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="js--off">
-	<head>
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<meta property="og:title" content="Wikimedia Design Strategy Website">
+	<meta property="og:title" content="Wikimedia Foundation - Product Design Strategy">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://design.wikimedia.org/style-guide">
-	<meta property="og:image" content="https://design.wikimedia.org/style-guide/img/design-principles/content-first.png">
+	<meta property="og:url" content="https://design.wikimedia.org/strategy">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8b/Wikimedia-logo_black.svg">
 	<link rel="stylesheet" href="css/build/wmui-style-guide.min.css">
-	<title>Wikimedia Design Strategy at the Wikimedia Foundation</title>
+	<title>Team - Wikimedia Product Design Strategy</title>
 	<script>
-		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/,'js--on');
+		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/, 'js--on');
 	</script>
-	<!--[if lt IE 9]>
-	<script>window.html5={'shivCSS':false};</script>
-	<script src="js/vendor/ie/html5shiv-3.7.3.min.js"></script>
-	<![endif]-->
 	<link rel="dns-prefetch" href="https://piwik.wikimedia.org/">
 	<link rel="preload" href="fonts/Charter_regular.woff2" as="font" type="font/woff2" crossorigin>
-	<script src="js/wikimedia-design-style-guide.min.js" async></script>
-
-	<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
-
-
+	<script src="js/src/fonts-loader.js" async></script>
 </head>
-<body class="page--home" vocab="http://schema.org/" typeof="WebPage">
+
+<body class="wdslp wdslp--cta page--team">
 	<header id="header" class="header" role="banner">
 		<div class="content-box">
 			<a href="#content" class="is-aural is-focusable">Jump to content</a>
 			<a href="#nav--main" class="is-aural is-focusable">Jump to navigation</a>
-			<h1 class="site__title"><a href="./"><span class="site__logo"></span><span class="site__org">Wikimedia </span><span class="site__project">Design Strategy</span></a></h1>
+			<h1 class="site__title"><a href="index.html"><span class="site__logo"></span><span
+						class="site__org">Wikimedia Design Strategy</span></a></h1>
 			<label class="btn--nav-main" for="trigger--nav-main" aria-hidden="true" title="Show main menu">
 				<i></i> <span>Menu</span>
 			</label>
@@ -65,92 +33,101 @@
 		<div class="content-box">
 			<div class="col col--start">
 				<input type="checkbox" id="trigger--nav-main" class="trigger--nav-main">
-				<nav id="nav--main" class="nav nav--main" role="navigation">
+				<nav id="nav--main" class="nav nav--main">
 					<ol>
-						<li class="nav__item"><a href="index.html">Home</a></li>
-						<li class="nav__item"><a href="design-strategy.html">Design Strategy</a></li>
-						<ul class="nav__sub-items">
-							<li class="nav__sub-item"><a href="team.html">Team</a></li>
-						</ul>
-						<li class="nav__item"><a href="projects.html">Research Areas</a></li>
-						<ul class="nav__sub-items">
-						<li class="nav__sub-item"><a href="audiences.html">Audiences</a></li>
-						<li class="nav__sub-item"><a href="movement.html">Movement</a></li>
-						<li class="nav__sub-item"><a href="mobile.html">Mobile Users</a></li>
-						<li class="nav__sub-item"><a href="other.html">Other</a></li>
-						</ul>
-						<li class="nav__item"><a href="participate.html">Participate</a></li>
-						<li class="nav__item"><a href="contact.html">Contact</a></li>
+						<li class="nav__item is-on"><a href="index.html">About</a>
+							<ul class="nav__sub-items">
+								<li class="nav__sub-item is-on"><a href="team.html">Team</a></li>
+								<li class="nav__sub-item"><a href="collaborators.html">Collaborators</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="initiatives.html">Initiatives</a></li>
+						<li class="nav__item"><a href="https://design.wikimedia.org/blog/" target="_blank">News</a></li>
+						<li class="nav__item"><a href="timeline.html">Timeline</a></li>
+						<li class="nav__item nav__item--participate"><span>Participate (coming soon)</span></li>
 					</ol>
 				</nav>
 			</div>
-
 			<div class="col col--end">
 				<main id="content" class="content" role="main">
-					<h2 class="page__title">Team</h2>
-
-
-			<div class="row">
-			  <div class="column" >
-					<figure class="figure figure--full">
-						<img src="img/team/Novotny_Margeigh_sq.jpg" alt="">
-					</figure>
-			  </div>
-			  <div class="column" >
-			    <h2>Margeigh Novotny</h2>
-			    <p>Senior Director, Design Research & Strategy</p>
-			  </div>
-			</div>
-
-			<div class="row">
-				<div class="column" >
-					<figure class="figure figure--full">
-						<img src="img/team/Ripstra_Abbey_sq.jpg" alt="">
-					</figure>
-				</div>
-				<div class="column" >
-					<h2>Abbey Ripstra</h2>
-					<p>Lead Design Researcher</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="column" >
-					<figure class="figure figure--full">
-						<img src="img/team/claudia_sq.jpg" alt="">
-					</figure>
-				</div>
-				<div class="column" >
-					<h2>Claudia Lo</h2>
-					<p>Design Researcher</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="column" >
-					<figure class="figure figure--full">
-						<img src="img/team/Daisy_Chen_sq.jpg" alt="">
-					</figure>
-				</div>
-				<div class="column" >
-					<h2>Daisy Chen</h2>
-					<p>Design Researcher</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="column" >
-					<figure class="figure figure--full">
-						<img src="img/team/Gerdemann_Bethany_sq.jpg" alt="">
-					</figure>
-				</div>
-				<div class="column" >
-					<h2>Bethany Gerdemann</h2>
-					<p>Design Research Coordinator</p>
-				</div>
-			</div>
-
-						</ul>
+					<div class="page__parent-title">About</div>
+					<h1 class="page__title">Team</h1>
+					<p></p>
+					<section id="team">
+						<div>
+							<ol class="list--team">
+								<li class="member">
+									<div class="member__picture">
+										<img src="img/margeigh.jpg" alt="Margeigh">
+									</div>
+									<div class="member__desc">
+										<span class="member__desc--name"><a
+												href="https://meta.wikimedia.org/wiki/User:MNovotny_(WMF)"
+												target="_blank">Margeigh Novotny</a></span>
+										<span class="member__desc--title">Senior Director <br>Product Design &
+											Strategy</span>
+									</div>
+								</li>
+								<li class="member">
+									<div class="member__picture">
+										<img src="img/ana.jpeg" alt="Ana">
+									</div>
+									<div class="member__desc">
+										<span class="member__desc--name"><a
+												href="https://meta.wikimedia.org/wiki/User:AChang_(WMF)"
+												target="_blank">Ana Chang</a></span>
+										<span class="member__desc--title">Design Strategy Team Manager <br>Design
+											Strategy</span>
+									</div>
+								</li>
+								<li class="member">
+									<div class="member__picture">
+										<img src="img/bethany.png" alt="Bethany">
+									</div>
+									<div class="member__desc">
+										<span class="member__desc--name"><a
+												href="https://meta.wikimedia.org/w/index.php?title=User:BGerdemann_(WMF)"
+												target="_blank">Bethany Gerdemann</a></span>
+										<span class="member__desc--title">Program Manager<br>Design Strategy</span>
+									</div>
+								</li>
+								<li class="member">
+									<div class="member__picture">
+										<img src="img/eli.jpg" title="photo by Myleen Hollero" alt="Eli">
+									</div>
+									<div class="member__desc">
+										<span class="member__desc--name"><a
+												href="https://meta.wikimedia.org/w/index.php?title=User:EAsikingarmager_(WMF)"
+												target="_blank">Eli Asikin-Garmager</a></span>
+										<span class="member__desc--title">Design Research Lead<br>Languages</span>
+									</div>
+								</li>
+								<li class="member">
+									<div class="member__picture">
+										<img src="img/daisy.jpg" alt="Daisy">
+									</div>
+									<div class="member__desc">
+										<span class="member__desc--name"><a
+												href="https://meta.wikimedia.org/wiki/User:Dchen_(WMF)"
+												target="_blank">Daisy Chen</a></span>
+										<span class="member__desc--title">Senior Design Researcher<br>Product
+											Design</span>
+									</div>
+								</li>
+								<li class="member">
+									<div class="member__picture">
+										<img src="img/claudia.jpg" alt="Claudia">
+									</div>
+									<div class="member__desc">
+										<span class="member__desc--name"><a
+												href="https://meta.wikimedia.org/wiki/User:CLo_(WMF)"
+												target="_blank">Claudia Lo</a></span>
+										<span class="member__desc--title">Senior Design Researcher<br>Community
+											Health</span>
+									</div>
+								</li>
+							</ol>
+						</div>
 					</section>
 				</main>
 			</div>
@@ -158,10 +135,15 @@
 	</div>
 	<footer id="footer" class="footer">
 		<div class="content-box">
-			<p>Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" property="license">Creative Commons Attribution-ShareAlike 4.0 International</a>, additional terms may apply. <br>Code is available under the MIT license.</p>
-			<p><a href="https://foundation.wikimedia.org/wiki/Non-wiki_privacy_policy">Privacy policy</a></p>
-			<p><a href="https://foundation.wikimedia.org/" class="lnk--wikimedia-project" property="author" typeof="Organization">A Wikimedia Foundation project</a></p>
-			<!-- noscript><p><img src="https://piwik.wikimedia.org/piwik.php?idsite=16&rec=1" alt=""></p></noscript -->
+			<p>Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+					rel="noopener" property="license">Creative Commons Attribution-ShareAlike 4.0 International</a>,
+				additional terms may apply. <br>Code is available under the MIT license.</p>
+			<p><a href="https://wikimediafoundation.org/privacy-policy/">Privacy policy</a></p>
+			<p><a href="https://wikimediafoundation.org/" class="lnk--wikimedia-project" property="author"
+					typeof="Organization">A Wikimedia Foundation project</a></p>
+			<noscript>
+				<p><img src="https://piwik.wikimedia.org/piwik.php?idsite=16&rec=1" alt=""></p>
+			</noscript>
 		</div>
 	</footer>
 </body>

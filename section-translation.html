@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="js--off">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta property="og:title" content="Wikimedia Foundation - Product Design Strategy">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://design.wikimedia.org/strategy">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8b/Wikimedia-logo_black.svg">
+	<link rel="stylesheet" href="css/build/wmui-style-guide.min.css">
+	<title>Article Section Translation - Wikimedia Product Design Strategy</title>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/, 'js--on');
+	</script>
+	<link rel="dns-prefetch" href="https://piwik.wikimedia.org/">
+	<link rel="preload" href="fonts/Charter_regular.woff2" as="font" type="font/woff2" crossorigin>
+	<script src="js/src/fonts-loader.js" async></script>
+</head>
+
+<body class="wdslp wdslp--cta page--section-translation">
+	<header id="header" class="header" role="banner">
+		<div class="content-box">
+			<a href="#content" class="is-aural is-focusable">Jump to content</a>
+			<a href="#nav--main" class="is-aural is-focusable">Jump to navigation</a>
+			<h1 class="site__title"><a href="index.html"><span class="site__logo"></span><span
+						class="site__org">Wikimedia Design Strategy</span></a></h1>
+			<label class="btn--nav-main" for="trigger--nav-main" aria-hidden="true" title="Show main menu">
+				<i></i> <span>Menu</span>
+			</label>
+		</div>
+	</header>
+	<div class="page">
+		<div class="content-box">
+			<div class="col col--start">
+				<input type="checkbox" id="trigger--nav-main" class="trigger--nav-main">
+				<nav id="nav--main" class="nav nav--main">
+					<ol>
+						<li class="nav__item"><a href="index.html">About</a></li>
+						<li class="nav__item"><a href="initiatives.html">Initiatives</a>
+							<ul class="nav__sub-items">
+								<li class="nav__sub-item"><a href="people-powered-movement.html">People Powered Movement</a>
+								</li>
+								<li class="nav__sub-item"><a href="online-social-behavior.html">Online Social Behavior</a>
+								</li>
+								<li class="nav__sub-item is-on"><a href="machine-augmentation.html">Machine Augmentation</a>
+								</li>
+								<li class="nav__sub-item"><a href="sentiment-perception.html">Sentiment & Perception</a></li>
+								<li class="nav__sub-item"><a href="research-development.html">Research & Development</a>
+								</li>
+								<li class="nav__sub-item"><a href="some-data.html">Some Data</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="https://design.wikimedia.org/blog/" target="_blank">News</a></li>
+						<li class="nav__item"><a href="timeline.html">Timeline</a></li>
+						<li class="nav__item nav__item--participate"><span>Participate (coming soon)</span></li>
+					</ol>
+				</nav>
+			</div>
+			<div class="col col--end">
+				<main id="content" class="content" role="main">
+					<div class="page__parent-title">Project</div>
+					<h1 class="page__title">Article Section Translation</h1>
+					<p class="page__tagline">Evaluating new designs for tools that help editors translate article
+						sections and receive translation support on mobile devices.</p>
+
+					<img src="img/sectiontranslation.png" title="photos provided by participants."
+						alt="article section translation">
+					<section id="project-overview">
+						<h2>Overview</h2>
+						<p>Section Translation is a part of <a
+								href="https://www.mediawiki.org/wiki/Content_translation/Boost" target="_blank">Content
+								Translation's Boost Initiative</a>, which aims to help Wikipedia communities grow
+							through the use of translation. Section Translation aims to solve current limitations of <a
+								href="https://www.mediawiki.org/wiki/Content_translation" target="_blank">Content
+								Translation</a> by allowing users to create and modify sections of articles,
+							prioritizing mobile-friendly design, and lowering the barrier to entry for new contributors.
+							This project evaluated current mobile prototypes with two target small wikis - <a
+								href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+								target="_blank">Bengali</a> and <a href="https://jv.wikipedia.org/wiki/Tepas"
+								target="_blank">Javanese</a>.
+					</section>
+
+					<h2>Top 10 High-Level Takeaways:</h2>
+					<p>1. Users perceive value in being able to expand and create articles by focusing on specific
+						sections. However, the unit of the article still has significant value because it’s how small
+						wikis are measured and track growth.</p>
+					<p>2. The unit of the article section matches existing editor workflows well, but participants
+						varied in whether they translated at the level of the sentence or at the level of the paragraph
+						(opting to paraphrase). While the desktop version of Section Translation will allow both
+						options, the mobile workflows only currently support the sentence-by-sentence workflow.</p>
+					<p>3. Completing a section provides an easier, faster feeling of satisfaction. By highlighting
+						progress, and progress towards high quality articles, we can help motivate editors and help them
+						build habits.</p>
+					<p>4. The bulk of the usability problems discovered and fixed in this project were in the part of
+						the mobile flows when the user is previewing and improving the proposed machine translation
+						(machine translation interaction).</p>
+					<p>5. Because Section Translation targets a subset of article content, it raises questions around
+						how editors may collaborate and co-translate articles and content. There is an opportunity to
+						explore ‘collaborative translation’ features, such as key concept vocabulary flagging and
+						dialectal variation tracking, among other possibilities.</p>
+					<p>6. Users are sensitive to content gaps and motivated by closing these gaps and providing access
+						to knowledge not available for monolingual readers in their regions/language communities. There
+						is an opportunity to better surface the impact of translators’ work and progress through
+						features such as translation views and thanks.</p>
+					<p>7. Current mobile-only users represent a growing segment and are underserved by current
+						translation tools. At the same time, laptop editing is a strong preference among users with
+						access to both types of devices. Section and article recommendations could be more successful by
+						factoring in device type and more user editing patterns.</p>
+					<p>8. Device-specific adoption patterns of Section Translation are likely, as are device-specific
+						feedback trends. Analytics and design research should collaborate to anticipate different ways
+						of collecting initial feedback and understanding patterns of adoption, both by new and
+						experienced translators.</p>
+					<p>9. The social side of contributing may take different forms depending on the cultural context.
+						For example, Javanese editors frequently discussed the importance of this social component,
+						which could be built into translation tools more overtly.</p>
+					<p>10. Although Content Translation gets equated with machine translation, users note many value
+						props of the CX tool, including automatic references and interlinks as well as vocabulary
+						suggestions and side-by-side presentation of the source and target text for faster translation.
+					</p>
+					<section id="project-updates" class="features">
+						<h2>Findings</h2>
+						<ol class="list list--features">
+							<li class="feature list__col">
+								<a href="https://meta.wikimedia.org/wiki/Research:Section_Translation_Design_Research"
+									class="feature__card">
+									<h3 class="feature__card--title">Project Objective</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="https://meta.wikimedia.org/wiki/File:Section_Translation_Design_Research.pdf"
+									class="feature__card">
+									<h3 class="feature__card--title">Full Report</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+						</ol>
+					</section>
+				</main>
+			</div>
+		</div>
+	</div>
+	<footer id="footer" class="footer">
+		<div class="content-box">
+			<p>Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+					rel="noopener" property="license">Creative Commons Attribution-ShareAlike 4.0 International</a>,
+				additional terms may apply. <br>Code is available under the MIT license.</p>
+			<p><a href="https://wikimediafoundation.org/privacy-policy/">Privacy policy</a></p>
+			<p><a href="https://wikimediafoundation.org/" class="lnk--wikimedia-project" property="author"
+					typeof="Organization">A Wikimedia Foundation project</a></p>
+			<noscript>
+				<p><img src="https://piwik.wikimedia.org/piwik.php?idsite=16&rec=1" alt=""></p>
+			</noscript>
+		</div>
+	</footer>
+</body>
+</html>

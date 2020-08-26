@@ -1,61 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="js--off">
-	<head>
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<meta property="og:title" content="Wikimedia Design Strategy Website">
+	<meta property="og:title" content="Wikimedia Foundation - Product Design Strategy">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://design.wikimedia.org/style-guide">
-	<meta property="og:image" content="https://design.wikimedia.org/style-guide/img/design-principles/content-first.png">
+	<meta property="og:url" content="https://design.wikimedia.org/strategy">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8b/Wikimedia-logo_black.svg">
 	<link rel="stylesheet" href="css/build/wmui-style-guide.min.css">
-	<title>Wikimedia Design Strategy at the Wikimedia Foundation</title>
+	<title>Wikimedia Product Design Strategy</title>
 	<script>
-		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/,'js--on');
+		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/, 'js--on');
 	</script>
-	<!--[if lt IE 9]>
-	<script>window.html5={'shivCSS':false};</script>
-	<script src="js/vendor/ie/html5shiv-3.7.3.min.js"></script>
-	<![endif]-->
 	<link rel="dns-prefetch" href="https://piwik.wikimedia.org/">
 	<link rel="preload" href="fonts/Charter_regular.woff2" as="font" type="font/woff2" crossorigin>
-	<script src="js/wikimedia-design-style-guide.min.js" async></script>
-
-
-		<style>
-	* {
-	  box-sizing: border-box;
-	}
-
-	/* Create three equal columns that floats next to each other */
-	.column {
-	  float: left;
-	  width: 50%;
-	  padding: 30px;
-	  height: 300px; /* Should be removed. Only for demonstration */
-	}
-
-	/* Clear floats after the columns */
-	.row:after {
-	  content: "";
-	  display: table;
-	  clear: both;
-	}
-
-	/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-	@media screen and (max-width: 600px) {
-	  .column {
-	    width: 100%;
-	  }
-	}
-	</style>
-
+	<script src="js/src/fonts-loader.js" async></script>
 </head>
-<body class="page--home" vocab="http://schema.org/" typeof="WebPage">
+
+<body class="wdslp wdslp--cta page--home">
 	<header id="header" class="header" role="banner">
 		<div class="content-box">
 			<a href="#content" class="is-aural is-focusable">Jump to content</a>
 			<a href="#nav--main" class="is-aural is-focusable">Jump to navigation</a>
-			<h1 class="site__title"><a href="index.html"><span class="site__logo"></span><span class="site__org">Wikimedia</span><span class="site__project">Design Strategy</span></a></h1>
+			<h1 class="site__title"><a href="index.html"><span class="site__logo"></span><span
+						class="site__org">Wikimedia Design Strategy</span></a></h1>
 			<label class="btn--nav-main" for="trigger--nav-main" aria-hidden="true" title="Show main menu">
 				<i></i> <span>Menu</span>
 			</label>
@@ -65,65 +33,109 @@
 		<div class="content-box">
 			<div class="col col--start">
 				<input type="checkbox" id="trigger--nav-main" class="trigger--nav-main">
-				<nav id="nav--main" class="nav nav--main" role="navigation">
+				<nav id="nav--main" class="nav nav--main">
 					<ol>
-						<li class="nav__item"><a href="index.html">Home</a></li>
-						<li class="nav__item"><a href="design-strategy.html">Design Strategy</a></li>
-						<ul class="nav__sub-items">
-							<li class="nav__sub-item"><a href="team.html">Team</a></li>
-						</ul>
-						<li class="nav__item"><a href="projects.html">Research Areas</a></li>
-						<ul class="nav__sub-items">
-						<li class="nav__sub-item"><a href="audiences.html">Audiences</a></li>
-						<li class="nav__sub-item"><a href="movement.html">Movement</a></li>
-						<li class="nav__sub-item"><a href="mobile.html">Mobile Users</a></li>
-						<li class="nav__sub-item"><a href="other.html">Other</a></li>
-					  </ul>
-						<li class="nav__item"><a href="participate.html">Participate</a></li>
-						<li class="nav__item"><a href="contact.html">Contact</a></li>
+						<li class="nav__item is-on"><a href="index.html">About</a>
+							<ul class="nav__sub-items">
+								<li class="nav__sub-item"><a href="team.html">Team</a></li>
+								<li class="nav__sub-item"><a href="collaborators.html">Collaborators</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="initiatives.html">Initiatives</a></li>
+						<li class="nav__item"><a href="https://design.wikimedia.org/blog/" target="_blank">News</a></li>
+						<li class="nav__item"><a href="timeline.html">Timeline</a></li>
+						<li class="nav__item nav__item--participate"><span>Participate (coming soon)</span></li>
 					</ol>
 				</nav>
 			</div>
 			<div class="col col--end">
 				<main id="content" class="content" role="main">
-					<h2 class="page__title">About</h2>
-						<p>The Wikimedia Design Strategy site hosts the research that is used in the product development of Wikimedia sites.
-							Because we're interested in how best to serve the movement and support the dissemination of free knowledge globally,
-							our research focuses on the Wikipedia movement's leaders, readers, and editors as well as the communities they come from.
-							The results of our research will give insights into what the Wikipedia community needs to thrive.
-							</p>
+					<h1 class="page__title">About</h1>
 
+					<p>The Design Strategy group supports <a href="https://design.wikimedia.org/"
+							target="_blank">Product Design</a> at the Foundation by providing the qualitative and
+						quantitative studies that allow Product teams to make informed and inspired decisions. From
+						explanations of what people do and want, to evaluations of what they experience, to experiments
+						with new and emerging technologies, the research team answers the most urgent and impactful
+						questions that stand in the way of delivering the <a
+							href="https://meta.wikimedia.org/wiki/Strategy/Wikimedia_movement/2018-20"
+							target="_blank">“sum of all knowledge, to all the world’s people, for free, forever.”</a>
+					</p>
 
-														<section id="projects-featured" class="features">
-															<h2>Featured Projects</h2>
+					<section id="project-updates" class="features">
+						<h2>Initiatives</h2>
+						<ol class="list list--features">
+							<li class="feature list__col">
+								<a href="people-powered-movement.html" class="feature__card">
+									<h4 class="feature__card--title">People Powered Movement</h4>
+									<span class="feature__card--desc">Understanding the motivations, challenges, and
+										strategies of the contributors to Wikimedia Projects.
+									</span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="online-social-behavior.html" class="feature__card">
+									<h4 class="feature__card--title">Online Social Behavior
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+									<span class="feature__card--desc">
+										Examining the prosocial and disruptive dimensions of online culture - on and
+										off-wiki.
+									</span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="machine-augmentation.html" class="feature__card">
+									<h4 class="feature__card--title">Machine Augmentation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									</h4>
+									<span class="feature__card--desc">Exploring machine-in-the-loop technologies to
+										enable knowledge equity at scale.
+									</span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="sentiment-perception.html" class="feature__card">
+									<h4 class="feature__card--title">Sentiment & Perception
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+									<span class="feature__card--desc">Understanding how our readers and contributors
+										perceive and engage with our tools and processes.
+									</span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="research-development.html" class="feature__card">
+									<h4 class="feature__card--title">Research & Development</h4>
+									<span class="feature__card--desc">Exploring longer horizon vision through design-lead
+										experiments and collaborations with third party partners.
+									</span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="some-data.html" class="feature__card">
+									<h4 class="feature__card--title">Some Data <br>&nbsp;</h4>
+									<span class="feature__card--desc">Understanding reader, editor and wiki-specific
+										phenomena through quantitative analysis.
+									</span>
+								</a>
+							</li>
+						</ol>
+					</section>
+				</main>
+			</div>
+		</div>
+	</div>
 
-																	<div class="row">
-																	  <div class="column">
-																			<figure class="feature">
-																				<a href="New_Editor_Experiences.html" class="feature__card">
-																					<h4 class="feature__card--title">New Editor Experiences</h4></a>
-																					<span class="feature__card--desc">New Editor Experiences is an investigation into users of mid-sized Wikis. This research identifies user characteristics, behaviors, and motivations using the Korean and Czech as representative examples of mid-sized Wikis. Then it examines how users interact with Wikipedia content and its interface. Insights from Czech and Korea are combined to create editor personas which are used to direct product development aimed at supporting users of mid-sized Wikis.</span>
-																				</figure>
-																	  </div>
-																		<li class="feature">
-																			<a href="New_Readers.html" class="feature__card">
-																				<h4 class="feature__card--title">New Readers</h4></a>
-																				<span class="feature__card--desc">The Wikimedia movement seeks to increase readership in Asia, Africa, and Latin America—places where new internet users are emerging but may not know or use Wikimedia sites. The New Readers research examines internet users and their context, assesses product development needs geared towards increasing engagement with Wikipedia for people in these contexts, and enhances our understanding of internet usage outside of high income countries. </span>
-
-																</div>
-															</section>
-
-											</main>
-										</div>
-									</div>
-								</div>
-								<footer id="footer" class="footer">
-									<div class="content-box">
-										<p>Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" property="license">Creative Commons Attribution-ShareAlike 4.0 International</a>, additional terms may apply. <br>Code is available under the MIT license.</p>
-										<p><a href="https://foundation.wikimedia.org/wiki/Non-wiki_privacy_policy">Privacy policy</a></p>
-										<p><a href="https://foundation.wikimedia.org/" class="lnk--wikimedia-project" property="author" typeof="Organization">A Wikimedia Foundation project</a></p>
-										<!-- noscript><p><img src="https://piwik.wikimedia.org/piwik.php?idsite=16&rec=1" alt=""></p></noscript -->
-									</div>
-								</footer>
-							</body>
-							</html>
+	<footer id="footer" class="footer">
+		<div class="content-box">
+			<p>Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+					rel="noopener" property="license">Creative Commons Attribution-ShareAlike 4.0 International</a>,
+				additional terms may apply. <br>Code is available under the MIT license.</p>
+			<p><a href="https://wikimediafoundation.org/privacy-policy/">Privacy policy</a></p>
+			<p><a href="https://wikimediafoundation.org/" class="lnk--wikimedia-project" property="author"
+					typeof="Organization">A Wikimedia Foundation project</a></p>
+			<noscript>
+				<p><img src="https://piwik.wikimedia.org/piwik.php?idsite=16&rec=1" alt=""></p>
+			</noscript>
+		</div>
+	</footer>
+</body>
+</html>

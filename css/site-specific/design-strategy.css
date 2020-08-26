@@ -1,0 +1,388 @@
+/* ::: Wikimedia Design Strategy Landing Page (`.wdslp`) :::: */
+.wdslp .site__title {
+	font-size: 1.4rem;
+	font-weight: var( --font-weight-bold );
+	text-transform: uppercase;
+}
+
+.wdslp .site__org {
+	display: inline-block;
+}
+
+/* ... Navigation ... */
+.page .nav--main .is-on > a {
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+/* Reset L1 nav item `font-weight` to `400` when on L2 sub-page */
+[class*='page-parent'] .nav--main > ol > .is-on > a {
+	font-weight: var( --font-weight-base );
+}
+
+.wdslp .nav__item--participate {
+	color: #72777d;
+	padding: 0.8rem 0 0.8rem 3.2rem;
+	cursor: default;
+}
+
+@media ( min-width: 240px ) {
+	.wdslp .nav__item--participate {
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
+}
+
+@media ( min-width: 414px ) {
+	.wdslp .nav__item--participate {
+		padding-left: 3.2rem;
+		padding-right: 3.2rem;
+	}
+}
+
+/* ... General Page Layout ... */
+.wdslp .page__parent-title {
+	margin-top: -2.6rem;
+}
+
+.wdslp .page__title {
+	margin-top: -0.6rem;
+}
+
+.wdslp .page__parent-title + .page__title {
+	margin-top: -0.4rem;
+}
+
+.wdslp .page__tagline {
+	font-weight: 300; /* Research Landing Page uses `100`. */
+}
+
+.wdslp h1 + p {
+	margin-top: 1.2rem;
+}
+
+.figure__caption {
+	color: var( --color-base--subtle );
+	display: block;
+	margin-top: 0.8rem;
+	font-size: 1.2rem;
+	font-style: italic;
+}
+
+/* ... Featured Projects ... */
+.features  {
+	margin-top: 2.4rem;
+}
+
+	.features h2 {
+		color: var( --color-base--subtle );
+		margin-top: 1.6em;
+		font-size: 1.6rem;
+		font-weight: 400;
+	}
+
+.list--features {
+	position: relative;
+	margin: 2.4rem 0 0;
+	padding: 0 0 0.8rem;
+}
+
+	.list--features:after {
+		content:' ';
+		display: block;
+		clear: both;
+	}
+
+.feature {
+	color: var( --color-base--emphasized );
+	list-style: none none;
+	display: inline-block;
+	margin-bottom: 4rem;
+	border-radius: var( --border-radius-base );
+}
+
+	.feature__card {
+		color: var( --color-base );
+		display: block;
+	}
+
+	.feature__card:hover {
+		text-decoration: none;
+	}
+
+	.feature__card--title {
+		margin-top: 0;
+		font-family: var( --font-family-serif--fallback ); /* Fallback */
+		font-size: 2.4rem;
+		font-weight: var( --font-weight-base );
+	}
+
+	.feature__card--desc {
+		color: var( --color-base );
+		display: block;
+		margin-top: 0.8rem;
+		font-size: 1.4rem;
+	}
+
+	.feature__card[href] .feature__card--desc:after {
+		content: 'Read more';
+		color: var( --color-primary );
+		display: block;
+		margin-top: 1.2rem;
+	}
+
+	.feature__card:hover .feature__card--desc:after {
+		text-decoration: underline;
+	}
+
+	.feature__card--time {
+		color: var( --color-base--subtle );
+		display: inline-block;
+		margin-top: 0.8rem;
+	}
+
+
+/* ... Team List ... */
+.list--team {
+	margin: 2.4rem 0 0;
+	padding: 0;
+}
+
+	.list--team:after {
+		content:' ';
+		display: block;
+		clear: both;
+	}
+
+	/* ... Collaborators ... */
+	.list--team + h2 {
+		margin-top: 0;
+	}
+
+.member {
+	color: var( --color-base--emphasized );
+	list-style: none none;
+	display: inline-block;
+	max-width: 28.8rem;
+	margin-bottom: 3.2rem;
+	border-radius: var( --border-radius-base );
+	vertical-align: top;
+}
+
+	.member__picture {
+		position: relative;
+		padding-bottom: 1.2rem;
+		font-size: 1.4rem;
+	}
+
+		.member__picture a {
+			display: block;
+			border-radius: var( --border-radius-base );
+			overflow-y: hidden;
+		}
+
+		.member__picture img {
+			display: block;
+			margin: 0;
+			border-radius: var( --border-radius-base );
+			filter: grayscale( 1 );
+			transition: filter var( --transition-medium );
+		}
+
+		.member__picture img:hover {
+			filter: grayscale( 0 );
+		}
+
+	.member__desc {
+		font-size: 1.4rem;
+	}
+
+		.member__desc--title {
+			color: var( --color-base--subtle );
+			display: block;
+			font-style: italic;
+		}
+
+/* ... Project Meta ... */
+.project-meta {
+	margin-top: 1.6em;
+	border-color: var( --border-color-heading );
+	border-style: solid;
+	border-width: var( --border-width-base ) 0 0;
+}
+
+.project__lead {
+	color: #72777d;
+}
+
+/* ... Team List ... */
+.page--collaborators p + p {
+	margin-top: 1.2rem;
+}
+
+
+/* ::: Media Queries ::: */
+/* ... Smartphone portrait ... */
+@media ( min-width: 240px ) {
+	.lnk--contribute {
+		opacity: 0;
+		transition: opacity var( --transition-medium );
+	}
+
+	.member,
+	.feature {
+		width: 100%;
+	}
+}
+
+/* ... Smartphone+ portrait ... */
+@media ( min-width: 414px ) {
+	.member,
+	.feature,
+	.list__col {
+		width: auto;
+		margin-right: 2.4rem;
+	}
+
+	.feature,
+	.list__col {
+		width: 18rem;
+	}
+
+	.list__col:only-child {
+		width: 100%;
+	}
+
+	/*
+	.list__col:nth-child( 2n ) {
+		margin-right: 0;
+	}
+	*/
+}
+
+/* ... Smartphone- landscape ... */
+@media ( min-width: 595px ) {
+	.lnk--contribute {
+		opacity: 1;
+	}
+
+	.member {
+		max-width: 21.2rem; /* = 28.8 - 1/4 */
+	}
+
+		.member__picture a {
+			max-height: 14.2rem;
+		}
+
+	.feature__card--desc:after {
+		position: absolute;
+		bottom: 1.6rem;
+		margin-top: 0;
+	}
+}
+
+/* ... Tablet ... */
+@media ( min-width: 768px ) {
+	.member__picture a {
+		max-height: 13.4rem;
+	}
+
+	.member__picture a:hover {
+		filter: grayscale( 0 );
+	}
+
+	.feature__card--desc:after {
+		position: static;
+		bottom: auto;
+		margin-top: 1.2rem;
+	}
+}
+
+/* ... Tablet+ / Netbook ... */
+@media ( min-width: 992px ) {
+	.member,
+	.feature,
+	.list__col {
+		display: block;
+		float: left;
+		width: 20rem;
+		margin-right: 2.4rem;
+	}
+
+	.list__col:only-child {
+		width: 100%;
+	}
+
+	.member:nth-child( 2n ),
+	.feature:nth-child( 2n ),
+	.list__col:nth-child( 2n ) {
+		margin-right: 2.4rem;
+	}
+
+	.member:nth-child( 3n ),
+	.feature:nth-child( 3n ),
+	.list__col:nth-child( 3n ) {
+		margin-right: 0;
+	}
+
+	.member:nth-child( 3n+1 ),
+	.feature:nth-child( 3n+1 ),
+	.list__col:nth-child( 3n+1 ) {
+		clear: left;
+	}
+
+	.feature__card--desc:after {
+		position: absolute;
+		bottom: 1.6rem;
+		margin-top: 0;
+	}
+}
+
+
+/* ... Widescreen ... */
+@media ( min-width: 1200px ) {
+	.feature,
+	.list__col {
+		width: 24rem;
+	}
+}
+
+.wdslp--cta .rectangle-3 {
+    display: inline;
+    float: right;
+    position: static;
+    top: auto;
+    right: auto;
+}
+
+.wdslp--cta .we-are-hiring {
+    border-radius: 2px;
+    border: solid 1px #36c;
+    background-color: #36c;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #fff;
+    padding: 8px 10px;
+}
+
+@media ( max-width: 767px ) {
+    .wdslp--cta .page {
+        margin-top: 9.3rem;
+    }
+    .wdslp--cta .rectangle-3 {
+        display: block;
+        float: none;
+        position: relative;
+        text-align: center;
+        margin-left: -3.2rem;
+        margin-right: -3.2rem;
+    }
+    .wdslp--cta .we-are-hiring {
+        display: block;
+    }
+}

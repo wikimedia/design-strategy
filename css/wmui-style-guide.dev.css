@@ -1,11 +1,13 @@
 /* ::: Vendor Imports ::: */
 /* Load files from 'node_modules' folders with postCSS-import plugin.
- * Modules specified in package.json file */
+ * Modules specified in package.json file. */
 @import 'wikimedia-ui-base/wikimedia-ui-base.css';
 @import 'normalize.css';
 
 /* ::: Local Imports ::: */
 @import 'partials/fonts.css';
+@import 'partials/fonts-loaded.css';
+@import 'site-specific/design-strategy.css';
 
 :root {
 	--background-color-hr: var( --wmui-color-base80 );
@@ -13,10 +15,13 @@
 	--width-site-desktop-wide: 1140px;
 	--border-color-heading: var( --wmui-color-base80 );
 	--border-width-heading: 3px;
-	/* HACK; Add Georgia to serif fallback as long as WikimediaUI Base isn't updated */
+	--outline-color-base--focus: var( --color-primary--focus );
+	/* HACK; Add Georgia to serif fallback as long as WikimediaUI Base isn't updated. */
 	--font-family-serif--fallback: Georgia, serif; /* stylelint-disable-line value-keyword-case */
 	--font-weight-base: 400;
-	--font-weight-bold: 700;
+	/* Setting bold to `600` as our stack works better with it, only Lato is on the edge.
+	   Helvetica and Arial fallback gracefully to `700`, see T246791. */
+	--font-weight-bold: 600;
 	--font-weight-ultralight: 100;
 }
 
@@ -45,6 +50,7 @@ h3,
 h4,
 h5,
 h6 {
+	color: var( --color-base--emphasized );
 	margin: 3.2rem 0 0;
 	line-height: 1.25;
 	transition: font-size var( --transition-ease-medium ), font-weight var( --transition-ease-medium );
@@ -68,6 +74,11 @@ h2 {
 	border-bottom: var( --border-width-heading ) var( --border-style-base ) var( --border-color-heading );
 	padding-bottom: 2px;
 	font-size: 2.4rem;
+}
+
+/* Reduce top margin when introductory headlines are following each other. */
+h2 + h3 {
+	margin-top: 1.6rem;
 }
 
 h3 {
@@ -136,6 +147,7 @@ p {
 	h5 + p,
 	h6 + p,
 	p + p,
+	ul + p,
 	p:first-child {
 		margin: 0.8rem 0 0;
 	}
@@ -149,7 +161,7 @@ pre,
 	background-color: var( --background-color-code );
 	color: var( --color-base--emphasized );
 	border: var( --border-base );
-	padding: 1.2rem;
+	padding: 1.2rem 2rem;
 	font-size: 1.4rem;
 	white-space: pre-wrap;
 }
@@ -180,6 +192,15 @@ img {
 	margin: 1.6rem 0 0;
 }
 
+.page--components figure {
+	margin-left: 6.4rem;
+	padding-top: 0.8rem;
+}
+
+.page--components figure img {
+	margin-top: 0.8rem;
+}
+
 /* ::: Inline Elements ::: */
 a {
 	color: var( --color-primary );
@@ -193,6 +214,11 @@ a {
 	a:active {
 		color: var( --color-primary--active );
 	}
+
+b,
+strong {
+	font-weight: var( --font-weight-bold );
+}
 
 code {
 	background-color: var( --background-color-code );
@@ -244,7 +270,9 @@ sup {
 .color-palette:before,
 .color-palette:after,
 .figures-do-dont:before,
-.figures-do-dont:after {
+.figures-do-dont:after,
+.content__illustration-style .figure--full:before,
+.content__illustration-style .figure--full:after {
 	content: ' ';
 	display: table;
 }
@@ -253,8 +281,31 @@ sup {
 .page:after,
 .content-box:after,
 .color-palette:after,
-.figures-do-dont:after {
+.figures-do-dont:after,
+.content__illustration-style .figure--full:after {
 	clear: both;
+}
+
+/* ::: Text-formatting ::: */
+/* Support Blink based browsers. */
+/* They use `outline` for focus styles, we're only amending the color here, see T245887. */
+:focus {
+	outline-color: var( --outline-color-base--focus );
+}
+
+.is-complementary,
+.is-subtle {
+	color: var( --color-base--subtle );
+}
+
+.is-complementary {
+	font-size: 1.4rem;
+}
+
+::placeholder,
+.is-placeholder {
+	color: var( --color-placeholder );
+	opacity: 1;
 }
 
 .content-box {
@@ -289,13 +340,26 @@ sup {
 		.site__title a {
 			color: inherit;
 			display: inline-block;
-			padding: 1.2rem 3.2rem 0;
+			/* padding: 1.2rem 3.2rem 0; */
+			line-height: 64px;
+			height: 6.4rem;
 			transition: color var( --transition-ease-medium );
 		}
 
 		.site__title a:hover {
 			color: var( --wmui-color-base0 ); /* --color-base-emphasized */
 			text-decoration: none;
+		}
+
+		.site__logo {
+			background-image: url( ../../img/Wikimedia-Foundation-logo.svg ); /* stylelint-disable-line function-url-quotes */
+			background-size: 24px;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 0.4rem;
+			margin-right: 0.8rem;
+			vertical-align: middle;
 		}
 
 		.site__org {
@@ -450,8 +514,12 @@ sup {
 	margin-bottom: 1em; /* FIXME: replace with rem and mt */
 }
 
-.nav__sub-items li {
+.nav__sub-items > .nav__sub-item {
 	margin-left: 3.6rem;
+}
+
+.nav--main .nav__sub-items ul {
+	margin: 0;
 }
 
 .nav--main .nav__sub-items a { /* stylelint-disable-line no-descending-specificity */
@@ -463,11 +531,15 @@ sup {
 	transition: background-color var( --transition-ease-medium ), color var( --transition-ease-medium );
 }
 
-.nav--main .nav__sub-item.is-on a {
+.nav--main .nav__sub-item.is-on > a {
 	background-color: var( --background-color-base );
 	color: var( --color-base--active );
 	border-left-color: var( --wmui-color-base0 );
 	font-weight: var( --font-weight-bold );
+}
+
+.nav--main .nav__sub-item .nav__sub-item a {
+	padding-left: 3.6rem;
 }
 
 
@@ -492,18 +564,41 @@ sup {
 	font-weight: 100;
 }
 
-.paragraph__lead {
+/* Remove, doesn't provide good styling
+.page__lead {
 	font-size: 1.8rem;
 }
+*/
 
-.figure__caption {
+.figures--full {
+	background-color: var( --wmui-color-base90 );
+}
+
+.figure__caption,
+.heading__description {
 	color: var( --color-base--subtle );
 	clear: both;
 	display: block;
-	padding-top: 0.8rem; /* `padding-top` due to usage with floated images in figure above */
 	font-size: 1.3rem;
+}
+
+.figure__caption {
+	padding-top: 0.8rem; /* `padding-top` due to usage with floated images in figure above */
 	font-style: italic;
 }
+
+	.figure__caption:empty {
+		display: none;
+	}
+
+.heading__description {
+	float: right;
+	margin-top: -1.9rem;
+}
+
+	.heading__description + * {
+		clear: both;
+	}
 
 /* ... “Do” & “Don't” figures ... */
 .figures-do-dont {
@@ -555,7 +650,7 @@ sup {
 	}
 
 .do {
-	color: var( --color-secondary );
+	color: var( --color-success );
 }
 
 	.do:before {
@@ -569,7 +664,6 @@ sup {
 	.dont:before {
 		content: '×';
 	}
-
 
 
 /* ... Color ... */
@@ -680,6 +774,77 @@ sup {
 			opacity: 0;
 		}
 
+@supports ( --css: variables ) {
+	.color-hint {
+		white-space: nowrap;
+	}
+
+	.color-hint:before {
+		content: '';
+		background-color: var( --color-hint );
+		display: inline-block;
+		width: 1.2rem;
+		height: 1.2rem;
+		margin: 0 0.4rem 0.3rem 0.2rem;
+		border-radius: 50%;
+		vertical-align: text-bottom;
+		cursor: help;
+	}
+
+	.color-hint--base100:before {
+		border: var( --border-base );
+	}
+}
+
+
+/* ... Icon ... */
+.icon {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	margin: 0 0.2rem;
+	vertical-align: text-bottom;
+}
+
+	.icon--indicator {
+		width: 1.2rem;
+		height: 1.2rem;
+		margin-bottom: 0.2rem;
+	}
+
+	.icon--intermediate {
+		width: 1.6rem;
+		height: 1.6rem;
+		margin-bottom: 0.2rem;
+	}
+
+
+/* ... Components ... */
+/*
+.page--components h2 {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+*/
+.components__designing {
+	position: relative;
+}
+
+.components__designing:after {
+	content: '';
+	background: url( ../../img/components/legend_16-8.svg ) no-repeat;
+	position: absolute;
+	bottom: 0;
+	right: 6.4rem;
+	width: 13.2rem;
+	height: 6.4rem;
+}
+
+.page--components-messages .components__intro {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* ... Resources ... */
 .resources-table {
@@ -724,14 +889,16 @@ sup {
 .footer {
 	color: var( --color-base );
 	padding: 2.4rem 0;
-	font-size: 1.2rem;
-	font-weight: var( --font-weight-base );
+	font-size: 1.3rem;
 }
 
 .footer__list {
-	margin: 0;
 	padding: 0;
 }
+
+	.footer__list:first-child {
+		margin: 0;
+	}
 
 	.footer__list:after {
 		content: ' ';
@@ -749,12 +916,12 @@ sup {
 		padding-top: 0;
 	}
 
-	.footer__list a {
-		font-weight: var( --font-weight-bold );
-	}
-
 	.footer__list + p {
 		margin-top: 1.2rem;
+	}
+
+	.footer__list--connect a {
+		font-weight: var( --font-weight-bold );
 	}
 
 .lnk--wikimedia-project {
@@ -769,6 +936,15 @@ sup {
 .page--home .page__title {
 	border: 0;
 	padding: 0;
+}
+
+/* ... “Design principles – Accessibility” ... */
+.page--design-principles-accessibility .nav--main .is-on > a {
+	cursor: pointer;
+}
+
+.page--design-principles-accessibility h3 {
+	padding-right: 15%;
 }
 
 /* ... “Typography” ... */
@@ -825,17 +1001,6 @@ sup {
 	padding: 2.4rem;
 }
 
-.illustrations-case-study img {
-	display: block;
-	float: left;
-	width: 31.33%;
-	margin: 0 1%;
-}
-
-	.illustrations-case-study img:first-child {
- 		margin-left: 0;
-	}
-
 
 /* ::: Dynamic content ::: */
 .fonts-loaded cite,
@@ -846,7 +1011,8 @@ sup {
 
 /* ::: Text Block-Level Elements ::: */
 .fonts-loaded .page__title,
-.fonts-loaded blockquote {
+.fonts-loaded blockquote,
+.fonts-loaded .typography-styles h1 {
 	font-family: 'Charter', Georgia, serif; /* stylelint-disable-line font-family-name-quotes */
 }
 
@@ -877,6 +1043,11 @@ sup {
 
 	.typography-styles dt {
 		display: block;
+		margin-left: 0;
+	}
+
+	/* ... Components ... */
+	.page--components .components__states {
 		margin-left: 0;
 	}
 
@@ -949,6 +1120,23 @@ sup {
 		margin-right: 1.6rem;
 	}
 
+	.figure--this-is-for-everyone img,
+	.figure--trustworthy-yet-joyful img {
+		width: 100%;
+		max-width: 568px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.figure--illustrations-header img {
+		width: 100%;
+	}
+
+	.figure--illustrations-header + .figure--illustrations-header,
+	.figure--illustrations-header + .figure--illustrations-header img {
+		margin-top: 0;
+	}
+
 	.color {
 		width: 61.8%;
 	}
@@ -964,6 +1152,10 @@ sup {
 	.color-palette--overview.color-palette--base .color--emphasized {
 		margin-right: 1.1rem;
 		margin-left: -0.2rem;
+	}
+
+	.page--components figure {
+		margin-left: 4.2rem;
 	}
 }
 
@@ -1003,15 +1195,17 @@ sup {
 	.footer__list li {
 		display: list-item;
 		float: left;
-		padding: 0;
+		padding: 0 0.8rem 0 0;
 	}
 
-	.footer__list li:before {
+	.footer__list li:after {
 		content: '\2022'; /* bullet dot: '•' */
-		padding: 0 0.8rem;
+		color: var( --color-base--subtle );
+		padding: 0 0 0 0.8rem;
+		font-weight: 100;
 	}
 
-	.footer__list li:first-child:before {
+	.footer__list li:last-child:after {
 		content: '';
 		padding: 0;
 	}
@@ -1041,10 +1235,33 @@ sup {
 	.figures-do-dont .figure {
 		max-width: 61.8%;
 	}
+
+	.figure--this-is-for-everyone img,
+	.figure--trustworthy-yet-joyful img {
+		max-width: none;
+	}
+
+	.figure--illustrations-header {
+		float: left;
+		width: 44.4%;
+	}
+
+	.figure--illustrations-header + .figure--illustrations-header {
+		width: 55.55%;
+		margin-top: 0.8rem;
+	}
+
+	.figure--illustrations-header + .figure--illustrations-header img {
+		margin-top: 1.6rem;
+	}
 }
 
 /* ... Tablet ... */
 @media ( min-width: 768px ) {
+	img {
+		border-radius: 2px;
+	}
+
 	.content-box {
 		width: 100%;
 		max-width: 960px;
@@ -1097,12 +1314,18 @@ sup {
 		width: 50%;
 	}
 
-	img {
-		border-radius: 2px;
-	}
-
 	.color-palette--base .color:nth-child( 3n+4 ) {
 		clear: unset;
+	}
+
+	/* ... “Illustrations” ... */
+	.illustrations-case-study img {
+		float: left;
+		width: 33.33%;
+	}
+
+	.page--components figure {
+		margin-left: 6.4rem;
 	}
 }
 
