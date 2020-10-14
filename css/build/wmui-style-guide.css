@@ -740,6 +740,9 @@ template {
 .feature__card {
 		color: #202122;
 		display: block;
+		position: relative;
+		/* Make space for 'Read more' link */
+		padding-bottom: 3.2rem;
 	}
 .feature__card:hover {
 		text-decoration: none;
@@ -760,7 +763,7 @@ template {
 		content: 'Read more';
 		color: #36c;
 		display: block;
-		margin-top: 1.2rem;
+		bottom: 0;
 	}
 .feature__card:hover .feature__card--desc:after {
 		text-decoration: underline;

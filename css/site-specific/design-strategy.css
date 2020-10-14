@@ -104,6 +104,9 @@
 	.feature__card {
 		color: var( --color-base );
 		display: block;
+		position: relative;
+		/* Make space for 'Read more' link */
+		padding-bottom: 3.2rem;
 	}
 
 	.feature__card:hover {
@@ -128,7 +131,7 @@
 		content: 'Read more';
 		color: var( --color-primary );
 		display: block;
-		margin-top: 1.2rem;
+		bottom: 0;
 	}
 
 	.feature__card:hover .feature__card--desc:after {
