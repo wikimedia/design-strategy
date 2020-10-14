@@ -735,8 +735,7 @@ template {
 	list-style: none none;
 	display: inline-block;
 	margin-bottom: 4rem;
-	-moz-border-radius: 2px;
-	     border-radius: 2px;
+	border-radius: 2px;
 }
 .feature__card {
 		color: #202122;
@@ -791,8 +790,7 @@ template {
 	display: inline-block;
 	max-width: 28.8rem;
 	margin-bottom: 3.2rem;
-	-moz-border-radius: 2px;
-	     border-radius: 2px;
+	border-radius: 2px;
 	vertical-align: top;
 }
 .member__picture {
@@ -802,20 +800,17 @@ template {
 	}
 .member__picture a {
 			display: block;
-			-moz-border-radius: 2px;
-			     border-radius: 2px;
+			border-radius: 2px;
 			overflow-y: hidden;
 		}
 .member__picture img {
 			display: block;
 			margin: 0;
-			-moz-border-radius: 2px;
-			     border-radius: 2px;
+			border-radius: 2px;
 			-webkit-filter: grayscale( 1 );
 			        filter: grayscale( 1 );
 			-webkit-transition: -webkit-filter var( --transition-medium );
 			transition: -webkit-filter var( --transition-medium );
-			-moz-transition: filter var( --transition-medium );
 			transition: filter var( --transition-medium );
 			transition: filter var( --transition-medium ), -webkit-filter var( --transition-medium );
 		}
@@ -851,7 +846,6 @@ template {
 	.lnk--contribute {
 		opacity: 0;
 		-webkit-transition: opacity var( --transition-medium );
-		-moz-transition: opacity var( --transition-medium );
 		transition: opacity var( --transition-medium );
 	}
 
@@ -975,8 +969,7 @@ template {
     right: auto;
 }
 .wdslp--cta .we-are-hiring {
-    -moz-border-radius: 2px;
-         border-radius: 2px;
+    border-radius: 2px;
     border: solid 1px #36c;
     background-color: #36c;
     font-size: 1.3rem;
@@ -1037,7 +1030,6 @@ h6 {
 	margin: 3.2rem 0 0;
 	line-height: 1.25;
 	-webkit-transition: font-size 250ms, font-weight 250ms;
-	-moz-transition: font-size 250ms, font-weight 250ms;
 	transition: font-size 250ms, font-weight 250ms;
 }
 h2,
@@ -1252,10 +1244,6 @@ sup {
 	color: #72777d;
 	opacity: 1;
 }
-:-moz-placeholder {
-	color: #72777d;
-	opacity: 1;
-}
 ::-moz-placeholder {
 	color: #72777d;
 	opacity: 1;
@@ -1305,7 +1293,6 @@ sup {
 			line-height: 64px;
 			height: 6.4rem;
 			-webkit-transition: color 250ms;
-			-moz-transition: color 250ms;
 			transition: color 250ms;
 		}
 .site__title a:hover {
@@ -1314,8 +1301,7 @@ sup {
 		}
 .site__logo {
 			background-image: url( ../../img/Wikimedia-Foundation-logo.svg ); /* stylelint-disable-line function-url-quotes */
-			-moz-background-size: 24px;
-			     background-size: 24px;
+			background-size: 24px;
 			display: inline-block;
 			width: 24px;
 			height: 24px;
@@ -1342,9 +1328,7 @@ sup {
 		display: block;
 		height: 4.2rem;
 		-webkit-transition: color 250ms, box-shadow 250ms;
-		-moz-transition: color 250ms, box-shadow 250ms, -moz-box-shadow 250ms;
 		transition: color 250ms, box-shadow 250ms;
-		transition: color 250ms, box-shadow 250ms, -moz-box-shadow 250ms;
 	}
 .btn--nav-main i:before,
 	.btn--nav-main i:after {
@@ -1358,16 +1342,14 @@ sup {
 	}
 .btn--nav-main i:after {
 		top: 1.1rem;
-		-moz-box-shadow: 0 0.7rem 0 #54595d;
-		     box-shadow: 0 0.7rem 0 #54595d;
+		box-shadow: 0 0.7rem 0 #54595d;
 	}
 .btn--nav-main i:hover:before,
 	.btn--nav-main i:hover:after {
 		background-color: #000; /* --color-base-emphasized */
 	}
 .btn--nav-main i:hover:after {
-		-moz-box-shadow: 0 0.7rem 0 #000;
-		     box-shadow: 0 0.7rem 0 #000;
+		box-shadow: 0 0.7rem 0 #000;
 	}
 .btn--nav-main span {
 		display: block;
@@ -1389,8 +1371,7 @@ sup {
 	position: relative;
 	margin-top: 6.4rem;
 	padding: 6.4rem 0;
-	-moz-box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
-	     box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
+	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
 	overflow-y: hidden;
 }
 .content {
@@ -1437,7 +1418,6 @@ sup {
 	font-size: 1.6rem;
 	text-decoration: none;
 	-webkit-transition: background-color 250ms, color 250ms, padding 250ms;
-	-moz-transition: background-color 250ms, color 250ms, padding 250ms;
 	transition: background-color 250ms, color 250ms, padding 250ms;
 }
 .nav--main a:hover,
@@ -1449,8 +1429,7 @@ sup {
 	background-color: #eaf3ff;
 	color: #36c;
 	/* border-left: 2px solid var( --color-primary ); */
-	-moz-border-radius: 2px;
-	     border-radius: 2px;
+	border-radius: 2px;
 	font-weight: 600;
 	cursor: default;
 }
@@ -1467,12 +1446,10 @@ sup {
 .nav--main .nav__sub-items a { /* stylelint-disable-line no-descending-specificity */
 	color: #54595d;
 	border-left: 1px solid #eaecf0;
-    -moz-border-radius: 0 2px 2px 0;
-         border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
 	padding-left: 1.6rem;
 	font-size: 1.4rem;
 	-webkit-transition: background-color 250ms, color 250ms;
-	-moz-transition: background-color 250ms, color 250ms;
 	transition: background-color 250ms, color 250ms;
 }
 .nav--main .nav__sub-item.is-on > a {
@@ -1536,10 +1513,8 @@ sup {
 }
 .figures-do-dont .figure {
 	background-color: #eaecf0;
-	-moz-border-radius-topleft: 2px;
-	     border-top-left-radius: 2px;
-	-moz-border-radius-topright: 2px;
-	     border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
 }
 .figures-do-dont .figure--dont {
 	border-left: 1px solid #fff;
@@ -1604,8 +1579,7 @@ sup {
 	margin-bottom: 3.2rem;
 	padding: 1.2rem;
 	border: 1px solid #fff;
-	-moz-border-radius: 2px;
-	     border-radius: 2px;
+	border-radius: 2px;
 	font-size: 1.4rem;
 }
 .color--dark,
@@ -1624,8 +1598,7 @@ sup {
 		margin-top: 0.8rem;
 		margin-right: 1.2rem;
 		margin-bottom: 2.4rem;
-		-moz-border-radius: 3.2rem;
-		     border-radius: 3.2rem;
+		border-radius: 3.2rem;
 		cursor: default;
 	}
 .color-palette--overview .color:first-child {
@@ -1635,8 +1608,7 @@ sup {
 		width: 7.2rem;
 		height: 7rem;
 		margin-top: 0;
-		-moz-border-radius: 7.2rem;
-		     border-radius: 7.2rem;
+		border-radius: 7.2rem;
 		padding-top: 2rem;
 	}
 .color-palette--base .color {
@@ -1644,7 +1616,6 @@ sup {
 	}
 .color-section .color .color-code--hsb {
 		-webkit-transition: opacity 250ms;
-		-moz-transition: opacity 250ms;
 		transition: opacity 250ms;
 	}
 .color-section .color:hover .color-code--hsb {
@@ -1693,8 +1664,7 @@ sup {
 		width: 1.2rem;
 		height: 1.2rem;
 		margin: 0 0.4rem 0.3rem 0.2rem;
-		-moz-border-radius: 50%;
-		     border-radius: 50%;
+		border-radius: 50%;
 		vertical-align: text-bottom;
 		cursor: help;
 	}
@@ -1890,23 +1860,19 @@ sup {
 		left: -1.6rem;
 		right: -1.6rem;
 		padding-bottom: 1.6rem;
-		-moz-box-shadow: 0 2px 2px 0 rgba( 0, 0, 0, 0.25 );
-		     box-shadow: 0 2px 2px 0 rgba( 0, 0, 0, 0.25 ); /* FIXME: Update wmui-base */
+		box-shadow: 0 2px 2px 0 rgba( 0, 0, 0, 0.25 ); /* FIXME: Update wmui-base */
 		z-index: 1;
 		-webkit-transform: translateY( -200% );
-		   -moz-transform: translateY( -200% );
 		    -ms-transform: translateY( -200% );
 		        transform: translateY( -200% );
 		-webkit-transition: left 250ms, right 250ms, -webkit-transform 250ms;
 		transition: left 250ms, right 250ms, -webkit-transform 250ms;
-		-moz-transition: left 250ms, right 250ms, transform 250ms, -moz-transform 250ms;
 		transition: left 250ms, right 250ms, transform 250ms;
-		transition: left 250ms, right 250ms, transform 250ms, -webkit-transform 250ms, -moz-transform 250ms;
+		transition: left 250ms, right 250ms, transform 250ms, -webkit-transform 250ms;
 	}
 
 	.trigger--nav-main:checked + .nav--main {
 		-webkit-transform: translateY( 0 );
-		   -moz-transform: translateY( 0 );
 		    -ms-transform: translateY( 0 );
 		        transform: translateY( 0 );
 	}
@@ -1958,10 +1924,8 @@ sup {
 	.site__title a,
 	.nav--main a {
 		-webkit-transition-property: background-color, padding;
-		-moz-transition-property: background-color, padding;
 		transition-property: background-color, padding;
 		-webkit-transition-duration: 250ms;
-		   -moz-transition-duration: 250ms;
 		        transition-duration: 250ms;
 	}
 
@@ -2106,7 +2070,6 @@ sup {
 		display: inline;
 		opacity: 0;
 		-webkit-transition: opacity 250ms;
-		-moz-transition: opacity 250ms;
 		transition: opacity 250ms;
 	}
 
@@ -2136,8 +2099,7 @@ sup {
 /* ... Tablet ... */
 @media ( min-width: 768px ) {
 	img {
-		-moz-border-radius: 2px;
-		     border-radius: 2px;
+		border-radius: 2px;
 	}
 
 	.content-box {
@@ -2169,7 +2131,6 @@ sup {
 		width: 20.8rem;
 		z-index: 1;
 		-webkit-transition: width 250ms;
-		-moz-transition: width 250ms;
 		transition: width 250ms;
 	}
 
@@ -2264,7 +2225,6 @@ sup {
 	/* ... Resources ... */
 	.resources-table__body .resources-table__cell {
 		-webkit-transition: background-color 250ms;
-		-moz-transition: background-color 250ms;
 		transition: background-color 250ms;
 	}
 
