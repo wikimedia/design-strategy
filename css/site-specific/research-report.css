@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-id */
+
 p + p {
 	margin-top: 1.6rem;
 }
@@ -34,20 +36,20 @@ p + p {
 	font-family: serif;
 	font-size: 3.2rem;
 	font-weight: 400;
-	margin-top: -.6rem;
+	margin-top: -0.6rem;
 }
 
 .fonts-loaded h2.page__title,
 .fonts-loaded .project__card--title,
 .fonts-loaded .event__card--title {
-	font-family: Charter, serif;
+	font-family: 'Charter', serif;
 }
 
 .project__card--desc,
 .event__card--desc {
 	color: #222;
 	display: block;
-	margin-top: .8rem;
+	margin-top: 0.8rem;
 	/*
 	font-size: 1.4rem;
 	line-height: 1.6;
@@ -83,9 +85,9 @@ p + p {
 	width: 10rem;
 	position: absolute;
 	bottom: 100%;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 	right: 100%;
-	margin-right: -.5rem;
+	margin-right: -0.5rem;
 	pointer-events: none;
 	display: none;
 }
@@ -127,7 +129,7 @@ p + p {
 .donors,
 .touch {
 	list-style-type: disc;
-	margin: .8rem 0;
+	margin: 0.8rem 0;
 	padding: 0 1.6rem;
 }
 
@@ -149,72 +151,50 @@ p + p {
 	margin-bottom: 3rem;
 }
 
-.print--in {
-	display: none !important;
-}
-
-@media (min-width: 414px) {
-
+@media ( min-width: 414px ) {
 	#events .feature {
 		width: 25rem;
 	}
 
-	#events .feature:nth-child(3n+1) {
+	#events .feature:nth-child( 3n+1 ) {
 		clear: none;
 	}
 
-	#events .feature:nth-child(3n) {
+	#events .feature:nth-child( 3n ) {
 		margin-right: 2.4rem;
 	}
 
-	#events .feature:nth-child(2n+1) {
+	#events .feature:nth-child( 2n+1 ) {
 		clear: left;
 	}
 
-	#events .feature:nth-child(2n) {
+	#events .feature:nth-child( 2n ) {
 		margin-right: 0;
 	}
 }
 
-@media (min-width: 992px) {
-
+@media ( min-width: 992px ) {
 	#events .feature {
 		width: 28rem;
 	}
-
 }
 
-@media (min-width: 1200px) {
-
+@media ( min-width: 1200px ) {
 	#events .feature {
 		width: 36rem;
 	}
 }
 
-@media (max-width: 767px) {
+@media ( max-width: 767px ) {
 	body.cta .page {
 		margin-top: 6.4rem;
 	}
 }
 
 @media print {
-
 	@page {
 		size: auto;
 		margin: 30mm 20mm 30mm;
-	}
-
-	.print--out {
-		display: none !important;
-	}
-
-	.print--in {
-		display: block !important;
-	}
-
-	.print--in.inline--text,
-	.print--in.inline--text a {
-		display: inline !important;
 	}
 
 	.page {
@@ -235,17 +215,17 @@ p + p {
 	}
 
 	.border--top {
-		border-top: none;
+		border-top: 0;
 	}
 
 	.member__picture a {
-		-webkit-filter: grayscale(0);
-		filter: grayscale(0);
+		-webkit-filter: grayscale( 0 );
+		filter: grayscale( 0 );
 	}
 
 	#cover,
 	#contents {
-		display: flex !important;
+		display: flex;
 		justify-content: center;
 		align-items: stretch;
 		height: 100vh;
@@ -317,3 +297,4 @@ p + p {
 		height: 11.252rem;
 	}
 }
+/* stylelint-enable selector-max-id */

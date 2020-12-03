@@ -81,6 +81,7 @@ module.exports = function ( grunt ) {
 		stylelint: {
 			src: [
 				'css/*.dev.css',
+				'css/site-specific/*.css',
 				'!node_modules/**'
 			]
 		},

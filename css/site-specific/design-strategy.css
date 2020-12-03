@@ -16,7 +16,7 @@
 }
 
 /* Reset L1 nav item `font-weight` to `400` when on L2 sub-page */
-[class*='page-parent'] .nav--main > ol > .is-on > a {
+[ class*='page-parent' ] .nav--main > ol > .is-on > a {
 	font-weight: var( --font-weight-base );
 }
 
@@ -70,7 +70,7 @@
 }
 
 /* ... Featured Projects ... */
-.features  {
+.features {
 	margin-top: 2.4rem;
 }
 
@@ -88,7 +88,7 @@
 }
 
 	.list--features:after {
-		content:' ';
+		content: ' ';
 		display: block;
 		clear: both;
 	}
@@ -127,7 +127,7 @@
 		font-size: 1.4rem;
 	}
 
-	.feature__card[href] .feature__card--desc:after {
+	.feature__card[ href ] .feature__card--desc:after {
 		content: 'Read more';
 		color: var( --color-primary );
 		display: block;
@@ -152,7 +152,7 @@
 }
 
 	.list--team:after {
-		content:' ';
+		content: ' ';
 		display: block;
 		clear: both;
 	}
@@ -377,6 +377,7 @@
     .wdslp--cta .page {
         margin-top: 9.3rem;
     }
+
     .wdslp--cta .rectangle-3 {
         display: block;
         float: none;
@@ -385,6 +386,7 @@
         margin-left: -3.2rem;
         margin-right: -3.2rem;
     }
+
     .wdslp--cta .we-are-hiring {
         display: block;
     }
