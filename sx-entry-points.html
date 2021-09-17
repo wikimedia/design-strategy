@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="js--off">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta property="og:title" content="Wikimedia Foundation - Product Design Strategy">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://design.wikimedia.org/strategy">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8b/Wikimedia-logo_black.svg">
+	<link rel="stylesheet" href="css/build/wmui-style-guide.min.css">
+	<title>Section Translation Entry Points - Wikimedia Product Design Strategy</title>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/, 'js--on');
+	</script>
+	<link rel="dns-prefetch" href="https://piwik.wikimedia.org/">
+	<link rel="preload" href="fonts/Charter_regular.woff2" as="font" type="font/woff2" crossorigin>
+	<script src="js/src/fonts-loader.js" async></script>
+	<script src="js/matomo-tracking.min.js"></script>
+</head>
+
+<body class="wdslp wdslp--cta page--section-translation">
+	<header id="header" class="header">
+		<div class="content-box">
+			<a href="#content" class="is-aural is-focusable">Jump to content</a>
+			<a href="#nav--main" class="is-aural is-focusable">Jump to navigation</a>
+			<h1 class="site__title"><a href="index.html"><span class="site__logo"></span><span
+						class="site__org">Wikimedia Design Strategy</span></a></h1>
+			<label class="btn--nav-main" for="trigger--nav-main" aria-hidden="true" title="Show main menu">
+				<i></i> <span>Menu</span>
+			</label>
+		</div>
+	</header>
+	<div class="page">
+		<div class="content-box">
+			<div class="col col--start">
+				<input type="checkbox" id="trigger--nav-main" class="trigger--nav-main">
+				<nav id="nav--main" class="nav nav--main">
+					<ol>
+						<li class="nav__item"><a href="index.html">About</a></li>
+						<li class="nav__item is-on"><a href="initiatives.html">Initiatives</a>
+							<ul class="nav__sub-items">
+								<li class="nav__sub-item"><a href="powered-by-people.html">Powered by People</a></li>
+								<li class="nav__sub-item"><a href="online-social-behavior.html">Online Social Behavior</a>
+								</li>
+								<li class="nav__sub-item is-on"><a href="machine-augmentation.html">Machine Augmentation</a>
+								</li>
+								<li class="nav__sub-item"><a href="sentiment-perception.html">Sentiment & Perception</a></li>
+								<li class="nav__sub-item"><a href="research-development.html">Research & Development</a></li>
+								<li class="nav__sub-item"><a href="some-data.html">Some Data</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="https://design.wikimedia.org/blog/" target="_blank">News</a></li>
+						<li class="nav__item"><a href="timeline.html">Timeline</a></li>
+						<li class="nav__sub-item"><a href="participate.html">Participate</a></li>
+					</ol>
+				</nav>
+			</div>
+			<div class="col col--end">
+				<main id="content" class="content">
+					<div class="page__parent-title">Project</div>
+					<h1 class="page__title">Section Translation Entry Points</h1>
+					<p class="page__tagline">Improving discoverability of translation tools on Wikipedia.</p>
+						<figure>
+							<img src="img/sxentrypoints.png" title="Section translation entry points research" alt="Bengali speaking participants from research project">
+								<figcaption class="figure__caption">Photos provided by participants. Image by Bethany Gerdemann.</figcaption>
+						</figure>
+					<section id="project-overview">
+						<h2>Overview</h2>
+
+						<p>In 2020, a study of current and potential editors in seven small wikis revealed that most participants required
+							direct support to find <a href="https://www.mediawiki.org/wiki/Content_translation/Section_translation"
+							target="_blank">Content Translation</a> - a tool used to translate Wikipedia articles
+							(<a href="https://meta.wikimedia.org/w/index.php?title=File:Multilingual_Editor_Experiences_in_Small_Wikis_Research_Report.pdf&page=14"
+							target="_blank">read more about that study here</a>). At the same time, Content Translation has been used to
+							create more than 800k articles, demonstrating the power of translation to help grow content and improve access
+							to knowledge. Thus, helping to connect multilingual editors with translation tools is a promising strategy for
+							increasing content available on small wikis.</p>
+
+							<p>To help solve the demonstrated problem of Content Translation discoverability, this project provided iterative
+								evaluation of current concepts and prototypes for Section Translation entry points. Section Translation - a
+								recently available (on Bengali Wikipedia) in 2021 mobile-friendly version of the Content Translation tool -
+								currently lacks natural entry points. The entry points evaluated in this project included those designed for
+								both current and new translators, but focused primarily on Section Translation and the mobile experience.
+								They included concepts for both persistent and opportunistic entry points. The initial hypotheses upon which
+								the prototypes were designed originate in part from findings from the Multilingual Editor Experiences in Small
+								Wikis Project.</p>
+					</section>
+
+					<h2>Top High Level Takeaways:</h2>
+					<ul>
+					<li> This project provided contextualized evaluation of eight Section Translation (SX) entry point concepts through
+						moderated research sessions with potential and current editors of the Bengali Wikipedia (the first wiki where SX is
+						available).</li>
+					<li>  Using an iterative approach, one concept was eliminated after the first round, and further improvements were made
+						and tested for the other concepts. This report provides follow-up recommendations for these seven other prototypes
+						<i>(more details in results section)</i>, and proposed priorities for implementation <i>(more details in general discussion)</i>.</li>
+					<li> SX currently lacks natural entry points, including a way of easily accessing it. A persistent entry point in
+						the mobile menu was identified as promising, but improvements were needed to the visual treatment of embedded items.</li>
+					<li> To increase the existing SX translator base, the language switcher entry point should be prioritized due to
+						the translation editing opportunities (content gaps) it can present to both potential and current editors.</li>
+					<li> Some entry point concepts should be exposed to specific segments of translators. For example, the machine
+						translation (MT) sections for readers entry point can be targeted to registered editors, and newcomers may benefit
+						from the recently translated notice being refined to display for articles requiring minimal (but much needed)
+						improvements.</li>
+					<li> Provided it’s displayed to editors who actively edit two or more language versions of Wikipedia, the entry point
+						after a regular (non-translation) edit is perceived as of greater ease given it’s a natural task extension.</li>
+					<li> This report focuses on designs and improvements made during two rounds of research sessions, as well as some
+						final recommendations. The latest designs and development progress can be tracked at this
+						<a href="https://phabricator.wikimedia.org/T286641" target="_blank">Phabricator ticket</a>.</li>
+					<li> Although it doesn’t eliminate the need for additional research, the general discussion provides some concepts
+						and ideas for what may be more generalizable findings relevant for other teams developing entry points for other
+						projects and contribution tasks. <i>(more details at ‘entry points - beyond Section Translation’ section of report)</i></li>
+					</ul>
+					<section id="project-updates" class="features">
+						<h2>Findings</h2>
+						<ol class="list list--features">
+							<li class="feature list__col">
+								<a href="https://meta.wikimedia.org/wiki/Research:Section_Translation_Entry_Points_Design_Research"
+									target="_blank" rel="noopener" class="feature__card">
+									<h3 class="feature__card--title">Project Objective</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="https://commons.wikimedia.org/wiki/File:Section_Translation_Entry_Points_Research_-_Final_Report.pdf"
+									target="_blank" rel="noopener" class="feature__card">
+									<h3 class="feature__card--title">Full Report</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+						</ol>
+					</section>
+				</main>
+			</div>
+		</div>
+	</div>
+	<footer id="footer" class="footer" role="contentinfo">
+		<div class="content-box">
+			<p>Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+					rel="noopener" property="license">Creative Commons Attribution-ShareAlike 4.0 International</a>,
+				additional terms may apply. <br>Code is available under the MIT license.</p>
+			<p><a href="https://wikimediafoundation.org/privacy-policy/">Privacy policy</a></p>
+			<p><a href="https://wikimediafoundation.org/" class="lnk--wikimedia-project" property="author"
+					typeof="Organization">A Wikimedia Foundation project</a></p>
+			<noscript>
+				<p><img src="https://piwik.wikimedia.org/piwik.php?idsite=16&rec=1" alt=""></p>
+			</noscript>
+		</div>
+	</footer>
+</body>
+</html>

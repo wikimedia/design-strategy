@@ -8,7 +8,7 @@
 	<meta property="og:url" content="https://design.wikimedia.org/strategy">
 	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8b/Wikimedia-logo_black.svg">
 	<link rel="stylesheet" href="css/build/wmui-style-guide.min.css">
-	<title>CheckUser Workflow and Tool Improvements - Wikimedia Product Design Strategy</title>
+	<title>Wikifunctions, phases 1 & 2 - Wikimedia Product Design Strategy</title>
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/, 'js--on');
 	</script>
@@ -18,7 +18,7 @@
 	<script src="js/matomo-tracking.min.js"></script>
 </head>
 
-<body class="wdslp wdslp--cta page--check-user">
+<body class="wdslp wdslp--cta page--section-translation">
 	<header id="header" class="header">
 		<div class="content-box">
 			<a href="#content" class="is-aural is-focusable">Jump to content</a>
@@ -39,66 +39,80 @@
 						<li class="nav__item"><a href="index.html">About</a></li>
 						<li class="nav__item is-on"><a href="initiatives.html">Initiatives</a>
 							<ul class="nav__sub-items">
-								<li class="nav__sub-item is-on"><a href="powered-by-people.html">Powered by People</a>
-								</li>
+								<li class="nav__sub-item"><a href="powered-by-people.html">Powered by People</a></li>
 								<li class="nav__sub-item"><a href="online-social-behavior.html">Online Social Behavior</a>
 								</li>
 								<li class="nav__sub-item"><a href="machine-augmentation.html">Machine Augmentation</a>
 								</li>
-								<li class="nav__sub-item"><a href="sentiment-perception.html">Sentiment & Perception</a>
-								</li>
-								<li class="nav__sub-item"><a href="research-development.html">Research & Development</a>
-								</li>
+								<li class="nav__sub-item"><a href="sentiment-perception.html">Sentiment & Perception</a></li>
+								<li class="nav__sub-item is-on"><a href="research-development.html">Research & Development</a></li>
 								<li class="nav__sub-item"><a href="some-data.html">Some Data</a></li>
 							</ul>
 						</li>
 						<li class="nav__item"><a href="https://design.wikimedia.org/blog/" target="_blank">News</a></li>
 						<li class="nav__item"><a href="timeline.html">Timeline</a></li>
-						<li class="nav__item"><a href="participate.html">Participate</a></li>
+						<li class="nav__sub-item"><a href="participate.html">Participate</a></li>
 					</ol>
 				</nav>
 			</div>
 			<div class="col col--end">
 				<main id="content" class="content">
 					<div class="page__parent-title">Project</div>
-					<h1 class="page__title">CheckUser Workflow and Tool Improvements</h1>
-					<p class="page__tagline">CheckUser is a critical tool for moderators in anti-vandalism efforts on
-						Wikipedia. This research surfaces the pain points in the CheckUser workflow and opportunities to improve the tool.</p>
+					<h1 class="page__title">Wikifunctions, phases 1 & 2</h1>
+					<p class="page__tagline">Research interviews exploring the Wikifunctions concept and early prototype design.</p>
 						<figure>
-							<img src="img/checkuser.png" title="left image by Flickr user InSapphoWeTrust, right image by Wikimedia Commons user Ian Shive." alt="Graffiti cleanup">
-								<figcaption class="figure__caption">left photo by Flickr user <a href=
-									"https://www.flickr.com/photos/skinnylawyer/5477800343" target="_blank">InSapphoWeTrust</a>, right photo by Wikimedia Commons user <a href="https://commons.wikimedia.org/wiki/File:Los_Angeles_Conservation_Coprs_(28477200403).jpg" target="_blank">Ian Shive</a>.<a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank">CC BY-SA 2.0</a>. Image by Bethany Gerdemann.</figcaption>
+							<img src="img/wikifunctions.png" title="wikifunctions" alt="two men programming">
+								<figcaption class="figure__caption">Photo by Wikimedia Commons User:<a href="https://commons.wikimedia.org/wiki/File:PHUHS_Robotics_Programmers.jpg"
+									target="_blank" rel="noopener">AP303</a>. <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+										target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
 						</figure>
 					<section id="project-overview">
 						<h2>Overview</h2>
-						<p>
-							Moderators face significant challenges when using the CheckUser tool. For instance, users of
-							the tool report there is a high technical learning curve; one needs to have good working
-							knowledge of how IP addresses and ranges work in order to determine if two user accounts are
-							socks. Other issues with the tool turn relatively simple tasks into lengthy and cumbersome
-							processes thereby rendering the act of moderation burdensome for Wikipedia volunteers. This
-							research details the workflow of volunteer moderators, also known as Stewards, surfaces the
-							pain points in the CheckUser workflow and presents opportunities to improve the tool.</p>
+						<p>Wikifunctions is a new project focused on writing and sharing code as part of the broader Abstract Wikipedia
+							initiative. The first phase of research focused on whether non-programmers could understand the Wikifunctions interface
+							and how they might use the site. 18 people reviewed screenshots of the initial prototype. The second phase of research focused on feedback from programmers. The goal was to interview those who already
+							knew how to code but did not think of themselves as professional developers.</p>
 					</section>
 
+					<h2>Top High Level Takeaways:</h2>
+
+					<ul>
+					<li>Regardless of their individual coding abilities, participants overwhelmingly felt that the Wikifunctions project was
+						 meant for programmers.</li>
+
+					<li>None of the participants could imagine substantive contributions for non-programmers beyond administrative tasks or
+						language translation skills. Those who were not technically inclined recognized that the project was not for them.</li>
+
+					<li>Programmers generally understood the UI but were skeptical about the project goals. Most felt that the interface
+						would be unsuitable for complex functions.</li>
+
+					</ul>
+					
 					<section id="project-updates" class="features">
-							<h2>Findings</h2>
-							<ol class="list list--features">
-								<li class="feature list__col">
-									<a href="https://meta.wikimedia.org/wiki/IP_Editing:_Privacy_Enhancement_and_Abuse_Mitigation/CheckUser_Improvements" target="_blank"
-										class="feature__card">
-										<h3 class="feature__card--title">Project Objective</h3>
-										<span class="feature__card--desc"></span>
-									</a>
-								</li>
-								<li class="feature list__col">
-									<a href="https://meta.wikimedia.org/wiki/Research:CheckUser_design_research" target="_blank"
-										class="feature__card">
-										<h3 class="feature__card--title">Design Research Documentation</h3>
-										<span class="feature__card--desc"></span>
-									</a>
-								</li>
-							</ol>
+						<h2>Findings</h2>
+						<ol class="list list--features">
+							<li class="feature list__col">
+								<a href="https://meta.wikimedia.org/wiki/Abstract_Wikipedia/Research/Mockups"
+								target="_blank"	rel="noopener" class="feature__card">
+									<h3 class="feature__card--title">Project Objective</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="https://commons.wikimedia.org/wiki/File:Research_-_Wikifunctions_mental_model.pdf"
+									target="_blank"	rel="noopener" class="feature__card">
+									<h3 class="feature__card--title">Mental Models Report</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="https://commons.wikimedia.org/wiki/File:Research_-_Wikifunctions_feedback.pdf"
+									target="_blank"	rel="noopener" class="feature__card">
+									<h3 class="feature__card--title">Interview Feedback Report</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+						</ol>
 					</section>
 				</main>
 			</div>
@@ -118,5 +132,4 @@
 		</div>
 	</footer>
 </body>
-
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="js--off">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta property="og:title" content="Wikimedia Foundation - Product Design Strategy">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://design.wikimedia.org/strategy">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8b/Wikimedia-logo_black.svg">
+	<link rel="stylesheet" href="css/build/wmui-style-guide.min.css">
+	<title>Media Matching - Wikimedia Product Design Strategy</title>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/, 'js--on');
+	</script>
+	<link rel="dns-prefetch" href="https://piwik.wikimedia.org/">
+	<link rel="preload" href="fonts/Charter_regular.woff2" as="font" type="font/woff2" crossorigin>
+	<script src="js/src/fonts-loader.js" async></script>
+	<script src="js/matomo-tracking.min.js"></script>
+</head>
+
+<body class="wdslp wdslp--cta page--section-translation">
+	<header id="header" class="header">
+		<div class="content-box">
+			<a href="#content" class="is-aural is-focusable">Jump to content</a>
+			<a href="#nav--main" class="is-aural is-focusable">Jump to navigation</a>
+			<h1 class="site__title"><a href="index.html"><span class="site__logo"></span><span
+						class="site__org">Wikimedia Design Strategy</span></a></h1>
+			<label class="btn--nav-main" for="trigger--nav-main" aria-hidden="true" title="Show main menu">
+				<i></i> <span>Menu</span>
+			</label>
+		</div>
+	</header>
+	<div class="page">
+		<div class="content-box">
+			<div class="col col--start">
+				<input type="checkbox" id="trigger--nav-main" class="trigger--nav-main">
+				<nav id="nav--main" class="nav nav--main">
+					<ol>
+						<li class="nav__item"><a href="index.html">About</a></li>
+						<li class="nav__item is-on"><a href="initiatives.html">Initiatives</a>
+							<ul class="nav__sub-items">
+								<li class="nav__sub-item"><a href="powered-by-people.html">Powered by People</a></li>
+								<li class="nav__sub-item"><a href="online-social-behavior.html">Online Social Behavior</a>
+								</li>
+								<li class="nav__sub-item"><a href="machine-augmentation.html">Machine Augmentation</a>
+								</li>
+								<li class="nav__sub-item"><a href="sentiment-perception.html">Sentiment & Perception</a></li>
+								<li class="nav__sub-item is-on"><a href="research-development.html">Research & Development</a></li>
+								<li class="nav__sub-item"><a href="some-data.html">Some Data</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="https://design.wikimedia.org/blog/" target="_blank">News</a></li>
+						<li class="nav__item"><a href="timeline.html">Timeline</a></li>
+						<li class="nav__sub-item"><a href="participate.html">Participate</a></li>
+					</ol>
+				</nav>
+			</div>
+			<div class="col col--end">
+				<main id="content" class="content">
+					<div class="page__parent-title">Project</div>
+					<h1 class="page__title">Media Matching</h1>
+					<p class="page__tagline">Identifying barriers faced by experienced editors in English, Arabic, and Japanese Wikipedias
+						when adding media to Wikipedia Articles.</p>
+						<figure>
+							<img src="img/mediamatching.png" title="Media Matching" alt="Vietnamese women painting at work">
+								<figcaption class="figure__caption">Photo by <a href="https://commons.wikimedia.org/wiki/File:Girls_painting_and_work_Vietnam.jpg"
+									target="_blank" rel="noopener">Peter van der Sluijs</a>. <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+										target="_blank" rel="noopener">CC BY-SA 3.0</a></figcaption>
+						</figure>
+					<section id="project-overview">
+						<h2>Overview</h2>
+							<p>The Media Matching project aimed to uncover barriers faced by experienced editors when adding images and other
+								media to Wikipedia Articles. This research was conducted to help inform a grant-supported three year development
+								plan that aims—in part—to increase the number of images used across different language versions of Wikipedia.</p>
+
+							<p>Conducted via semi-structured interviews with editors recruited from English, Japanese, and Arabic Wikipedias,
+								this effort revealed that experienced editors in all three communities in fact face different sets of barriers.
+								While English editors note weaknesses in the tools available to them while working with media on Commons,
+								Japanese editors note a culture of sensitivity to image license and copyright on Japanese Wikipedia that raises
+								the bar for images’ inclusion. Arabic editors, on the other hand note a lack of support for the Arabic language
+								on Commons which makes it more difficult to use images that might otherwise be Wikipedia-appropriate. Moving
+								forward, non-English editors may benefit from better integration of machine translation into Commons and Wikipedia
+								at various points in order to allow them to better interpret and use material taken from Commons.</p>
+					</section>
+
+					<h2>Top High Level Takeaways:</h2>
+
+					<ul>
+						<li>Making the jump to Commons: Non-English editors often experience a “hard break” between Wikipedia and Commons.
+						Making the jump to the primarily English Commons from their home Wikipedias can be difficult.</li>
+
+						<li>Finding media on Commons: Experienced English editors tend to navigate Commons using categories above all else.
+						Non-English editors typically find themselves relying on machine translation at some point before they access Commons,
+						because searching on Commons tends to be significantly less functional in non-English languages.</li>
+
+						<li>Captions: English editors often copy image descriptions directly from Commons. This is more laborious for non-English
+						editors, who must often either rely on machine translation or compose a new caption, because Commons file descriptions
+						are not appropriate in most non-English Wikipedias.</li>
+
+						<li>Localizing maps and diagrams: The Arabic community in particular places great emphasis on translating images such as
+						maps and scientific diagrams into Arabic. However, the tolls available to support this time-consuming and skilled work
+						remain limited. In turn, the supply of such images that are appropriate and useful for the Arabic Wikipedia readership
+						is also limited.</li>
+					</ul>
+
+					<section id="project-updates" class="features">
+						<h2>Findings</h2>
+						<ol class="list list--features">
+							<li class="feature list__col">
+								<a href="https://commons.wikimedia.org/wiki/File:Structured_Data_Media_Matching_(public).pdf"
+									target="_blank"	rel="noopener" class="feature__card">
+									<h3 class="feature__card--title">Summary</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+							<li class="feature list__col">
+								<a href="https://commons.wikimedia.org/wiki/File:Media_Matching_Synthesis.pdf"
+									target="_blank"	rel="noopener" class="feature__card">
+									<h3 class="feature__card--title">Full Report</h3>
+									<span class="feature__card--desc"></span>
+								</a>
+							</li>
+						</ol>
+					</section>
+				</main>
+			</div>
+		</div>
+	</div>
+	<footer id="footer" class="footer" role="contentinfo">
+		<div class="content-box">
+			<p>Text is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+					rel="noopener" property="license">Creative Commons Attribution-ShareAlike 4.0 International</a>,
+				additional terms may apply. <br>Code is available under the MIT license.</p>
+			<p><a href="https://wikimediafoundation.org/privacy-policy/">Privacy policy</a></p>
+			<p><a href="https://wikimediafoundation.org/" class="lnk--wikimedia-project" property="author"
+					typeof="Organization">A Wikimedia Foundation project</a></p>
+			<noscript>
+				<p><img src="https://piwik.wikimedia.org/piwik.php?idsite=16&rec=1" alt=""></p>
+			</noscript>
+		</div>
+	</footer>
+</body>
+</html>
