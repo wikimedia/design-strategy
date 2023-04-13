@@ -394,7 +394,14 @@
 
 /* Call To Action Buttons */
 form.btn--cta {
-	margin: 1.6rem auto -0.8rem auto;
+	margin: 2rem auto;
 	width: fit-content;
 	font-size: 2rem;
+}
+
+
+/* Notice */
+p.notice {
+    font-style: italic;
+    margin: 1.6rem 0;
 }
