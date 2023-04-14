@@ -1007,6 +1007,19 @@ template {
         display: block;
     }
 }
+/* Call To Action Buttons */
+form.btn--cta {
+	margin: 2rem auto;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	font-size: 2rem;
+}
+/* Notice */
+p.notice {
+    font-style: italic;
+    margin: 1.6rem 0;
+}
 :root {
 	/* HACK; Add Georgia to serif fallback as long as WikimediaUI Base isn't updated. */ /* stylelint-disable-line value-keyword-case */
 	/* Setting bold to `600` as our stack works better with it, only Lato is on the edge.
