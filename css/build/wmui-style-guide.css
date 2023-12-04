@@ -763,6 +763,13 @@ template {
 		margin-top: 0.8rem;
 		font-size: 1.4rem;
 	}
+.feature__card--lead {
+		color: #72777d;
+		display: block;
+		margin-top: 0.8rem;
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
 .feature__card[ href ] .feature__card--desc:after {
 		content: 'Read more';
 		color: #36c;

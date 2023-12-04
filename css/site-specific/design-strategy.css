@@ -127,6 +127,14 @@
 		font-size: 1.4rem;
 	}
 
+	.feature__card--lead {
+		color: var( --color-base--subtle );
+		display: block;
+		margin-top: 0.8rem;
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+
 	.feature__card[ href ] .feature__card--desc:after {
 		content: 'Read more';
 		color: var( --color-primary );
@@ -143,7 +151,6 @@
 		display: inline-block;
 		margin-top: 0.8rem;
 	}
-
 
 /* ... Team List ... */
 .list--team {
